@@ -1,17 +1,12 @@
 package LSP;
 
 public class Calculator {
-//    private AbstractOperation operation;   // 캡슐화
-//
-//    public void setOperation (AbstractOperation operation) { // 세터 사용   ,  메서드
-//        this.operation = operation;
-//    }
-//    public int calculate(int firstNumber, int secondNumber) {   //메서드
-//        return  operation.operate(firstNumber, secondNumber);
-//    }
-// ============================================================================================================
-    public int calculate(AbstractOperation operation, int firstNumber, int secondNumber){
+    // 연산 기능을 추상화된 부모클래스에 의존하여 처리한다.
+    public int calculate(AbstractOperation operation, int firstNumber, int secondNumber) {
+        // 나누기 연산 - 0처리 추가
+        if(operation.isInvalid(firstNumber, secondNumber)){
+                return -99999;
+        } //
         return operation.operate(firstNumber, secondNumber);
     }
-
 }

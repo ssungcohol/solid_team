@@ -2,7 +2,7 @@ package DIP;
 
 public class Client {
     public static void main(String[] args) {
-        Calculator calculator = new Calculator(); // 생성자를 통해 Calculator 호출
+        Calculator calculator = new Calculator();
 
 
         int firNum = 140;
